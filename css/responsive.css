@@ -1,0 +1,129 @@
+@media (max-width: 1199px) {
+
+}
+@media (max-width: 991px) {
+	.bg-dark {
+	    background-color:#8585859e!important;
+
+
+	}
+	.logodam {
+    top: 1px;
+
+}
+
+	.text-value {
+		font-size: 18px;
+		line-height: 22px;
+	}
+}
+@media (max-width: 840px) {
+	.filtro {
+    height: 850px;
+    background: linear-gradient(90deg, rgba(115, 114, 114, 0.25), rgba(52, 52, 52, 0.6));
+}
+.benefits {
+
+    height: 850px;
+    background: url(../assets/img/fake_brick.png) center;
+}
+.title.first {
+		font-size: 20px;
+		line-height: 45px;
+}
+.titlesub {
+
+    font-size: 18px;
+
+}
+	.form {
+    	width: 280px;
+	}
+	.input {
+    	width: 240px;
+	}
+}
+@media (max-width: 767px) {
+
+
+	.logodam {
+    left: 36%;
+}
+
+
+	.benefits {
+		    text-align: center;
+	    height: 850px;
+	    background: url(../assets/img/fake_brick.png) center;
+	}
+	.value6 {
+		height: 300px;
+text-align: center;
+}
+	.form.float-left {
+    width: calc(100% - 40px);
+    position: absolute;
+    top: 200px;
+    margin-right: 0px;
+    height: 470px;
+	}
+	.title.first.float-left {
+    float: none;
+    width: 100%;
+    margin-top: 70px;
+	}
+	.form .input {
+    display: inline-block;
+    width: 49%;
+	}
+	.section-form {
+    height: 800px;
+	}
+}
+@media (max-width: 575px) {
+	.logodam {
+		left: 32%;
+}
+	.value6 {
+    height: 300px;
+
+}
+	footer {
+    height: auto;
+    text-align: center;
+
+	}
+	#map {
+    height: 500px;
+    max-height: 100vh;
+	}
+	.title.first {
+		      margin-top: 150px!important;
+			font-size: 20px;
+			line-height: 35px;
+	}
+	.titlesub {
+
+	    font-size: 18px;
+
+	}
+	.section-title, .value, #map {
+		max-height: 100vh;
+	}
+}
+@media (max-width: 450px) {
+	.title, .title.first {
+    font-size: 20px;
+    line-height: 35px;
+		      margin-top: 150px!important;
+	}
+	.form.float-left {
+		top: 150px;
+	}
+	.section-form {
+    height: 750px;
+	}
+	.section-title.text-center {
+    height: 360px;
+	}
+}

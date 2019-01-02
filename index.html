@@ -1,0 +1,441 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Energy Combustibles</title>
+  <link href="css/scrolling-nav.css" rel="stylesheet">
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/icomoon/style.css">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link href="https://fonts.googleapis.com/css?family=Raleway:200,300i,400,700" rel="stylesheet">
+  <link href="css/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-3.3.1.min.js"></script>
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTRusQpcvp-P2V_nJct7lwUbrd2PFK2no"></script>
+<script type="text/javascript">
+            // When the window has finished loading create our google map below
+            google.maps.event.addDomListener(window, 'load', init);
+
+            function init() {
+                // Basic options for a simple Google Map
+                // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+                var mapOptions = {
+                    // How zoomed in you want the map to start at (always required)
+                    zoom: 12,
+                    draggable: false,
+                    scrollwheel: false,
+
+                    // The latitude and longitude to center the map (always required)
+                    center: new google.maps.LatLng(20.6626313,-103.397812,17),
+
+                    // How you would like to style the map.
+                    // This is where you would paste any style found on Snazzy Maps.
+                    styles: [
+                        {
+                            "featureType": "water",
+                            "elementType": "geometry",
+                            "stylers": [
+                                {
+                                    "color": "#e9e9e9"
+                                },
+                                {
+                                    "lightness": 17
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "landscape",
+                            "elementType": "geometry",
+                            "stylers": [
+                                {
+                                    "color": "#f5f5f5"
+                                },
+                                {
+                                    "lightness": 20
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "road.highway",
+                            "elementType": "geometry.fill",
+                            "stylers": [
+                                {
+                                    "color": "#ffffff"
+                                },
+                                {
+                                    "lightness": 17
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "road.highway",
+                            "elementType": "geometry.stroke",
+                            "stylers": [
+                                {
+                                    "color": "#ffffff"
+                                },
+                                {
+                                    "lightness": 29
+                                },
+                                {
+                                    "weight": 0.2
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "road.arterial",
+                            "elementType": "geometry",
+                            "stylers": [
+                                {
+                                    "color": "#ffffff"
+                                },
+                                {
+                                    "lightness": 18
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "road.local",
+                            "elementType": "geometry",
+                            "stylers": [
+                                {
+                                    "color": "#ffffff"
+                                },
+                                {
+                                    "lightness": 16
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "poi",
+                            "elementType": "geometry",
+                            "stylers": [
+                                {
+                                    "color": "#f5f5f5"
+                                },
+                                {
+                                    "lightness": 21
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "poi.park",
+                            "elementType": "geometry",
+                            "stylers": [
+                                {
+                                    "color": "#dedede"
+                                },
+                                {
+                                    "lightness": 21
+                                }
+                            ]
+                        },
+                        {
+                            "elementType": "labels.text.stroke",
+                            "stylers": [
+                                {
+                                    "visibility": "on"
+                                },
+                                {
+                                    "color": "#ffffff"
+                                },
+                                {
+                                    "lightness": 16
+                                }
+                            ]
+                        },
+                        {
+                            "elementType": "labels.text.fill",
+                            "stylers": [
+                                {
+                                    "saturation": 36
+                                },
+                                {
+                                    "color": "#333333"
+                                },
+                                {
+                                    "lightness": 40
+                                }
+                            ]
+                        },
+                        {
+                            "elementType": "labels.icon",
+                            "stylers": [
+                                {
+                                    "visibility": "off"
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "transit",
+                            "elementType": "geometry",
+                            "stylers": [
+                                {
+                                    "color": "#f2f2f2"
+                                },
+                                {
+                                    "lightness": 19
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "administrative",
+                            "elementType": "geometry.fill",
+                            "stylers": [
+                                {
+                                    "color": "#fefefe"
+                                },
+                                {
+                                    "lightness": 20
+                                }
+                            ]
+                        },
+                        {
+                            "featureType": "administrative",
+                            "elementType": "geometry.stroke",
+                            "stylers": [
+                                {
+                                    "color": "#fefefe"
+                                },
+                                {
+                                    "lightness": 17
+                                },
+                                {
+                                    "weight": 1.2
+                                }
+                            ]
+                        }
+                        ]
+                };
+
+                // Get the HTML DOM element that will contain your map
+                // We are using a div with id="map" seen below in the <body>
+                var mapElement = document.getElementById('map');
+
+                // Create the Google Map using our element and options defined above
+                var map = new google.maps.Map(mapElement, mapOptions);
+
+                // Let's also add a marker while we're at it
+                var image = 'assets/img/pointeramarillo.png';
+                var marker = new google.maps.Marker({
+                    position: new google.maps.LatLng(20.6626313,-103.397812,17),
+                    map: map,
+                    icon: image
+
+                });
+
+            }
+        </script>
+</head>
+<body   id="Inicio">
+  <header class="header">
+	<div class="container-fluid" id="header_main">
+		<div class="row">
+			<div class="col-md-12 " id="menu1">
+
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#Inicio">  <img class="logodam" src="assets/img/logo.png"></a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#Inicio"><span>INICIO</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#Nosotros"><span>NOSOTROS</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#Servicios"><span>SERVICIOS</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" id="encontacto" href="#Contacto"><span>CONTACTO</span></a>
+            </li>
+            <li class="nav-item">
+            <a class="border-none"><span class="icon-facebook"></span></a>
+            </li>
+            <li class="nav-item">
+            		<a class="border-none"><span class="icon-twitter"></span></a>
+            </li>
+            <li class="nav-item">
+              	<a class="border-none"><span class="icon-linkedin"></span></a>
+            </li>
+
+
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+
+			</div>
+
+			</div>
+		</div>
+	</header>
+	<div class="section-form">
+		<div class="container">
+			<div class="row">
+				<div class="col-12" id="sliderhome">
+
+					<div class="title first float-left">
+						CON ENERGY COMBUSTIBLES, TU PUEDES CONFIAR EN NUESTRO PROFESIONALISMO Y EXPERIENCIA, ADEMAS EN LA CALIDAD DE NUESTROS COMBUSTIBLES Y LA GARANTIA DE UN SUMINISTRO PUNTUAL
+					</div>
+
+          <p class="titlesub">Somos los únicos que te garantizamos además de calidad, cubrir tus necesidades de suministro en cualquier momento, gracias a nuestros diferentes TAR en PEMEX.</p>
+
+
+            <div class="line-value"></div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="benefits" id="Nosotros">
+<div class="filtro">
+
+
+			<div class="row">
+				<div class="col-md-4 benefit1">
+					<div class="title-benefit">Misión</div>
+					<p>
+						Ser la empresa número 1 en ventas  distribución de combustibles en la región occidente del país,
+            para estaciones de servicio  usuarios finales, ofreciendo a nuestros clientes la solución adecuada
+            para sus diferentes objetivos.
+          </p>
+
+				</div>
+				<div class="col-md-4 benefit2">
+					<div class="title-benefit">Visión</div>
+					<p>Brindar la satisfacción total a nuestros clientes ofreciendo el precio más competitivo,
+             producto de excelente calidad, certeza en el suministro y los servicios adecuados a sus necesidades.
+					</p>
+
+				</div>
+        <div class="col-md-4 benefit2">
+					<div class="title-benefit">Valores</div>
+					<p>Responsabilidad <br>
+            Puntualidad <br>
+            Confianza <br>
+            Ética <br>
+            Probidad
+					</p>
+
+				</div>
+			</div>
+
+	</div>
+</div>
+
+	<div class="section-title text-center">
+		<div class="valign">
+<div class="title"></div>
+			<div class="subtitle">¿Por qué Energy Combustibles?</div>
+      <p class="subp">En Energy Combustibles nos preocupamos por la satisfacción tota</p>
+		</div>
+	</div>
+
+	<div class="section-value" id="Servicios">
+		<div class="container-full ">
+			<div class="row">
+				<div class="value value1 col-md-4 col-sm-12">
+
+              <img id="iconserv" src="assets/img/oil.png">
+          <div class="title-servi">Flexibilidad y veracidad</div>
+					<p>
+					Contamos con diferentes procedimientos de descarga, para la comprobación de los litros recibidos
+          vs los soliciados.
+          </p>
+				</div>
+				<div class="value value2 col-md-4 col-sm-12">
+           <img id="iconserv" src="assets/img/garage.png">
+          <div class="title-servi">Capacidad y volumen</div>
+          <p>
+          Tenemos asignados volúmenes en diferentes TAR en PEMEX, así nos aseguramos de cubrir sus necesidades
+          en cualquier momento.
+          </p>
+          <p>
+          Contamos con un almacén de 200,000 litros de capacidad instalada, ubicado en La Quemada, Jalisco.
+          </p>
+
+				</div>
+				<div class="value value3 col-md-4 col-sm-12">
+         <img id="iconserv" src="assets/img/shield.png">
+          <div class="title-servi">Calidad</div>
+          <p>
+          Garantizamos la calidad del combustible con el análisis del mismo, de acuerdo a la NOM 016 CRE 2016 pro
+          medio de una alianza estratégica con un laboratorio de ensayo acreditado por la CRE.
+          </p>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
+  <div class="section-value" id="Contacto">
+    <div class="container-full ">
+      <div class="row">
+        <div class="val value5 col-md-8 col-sm-12">
+          <div class="section-map">
+        		<div id="map"></div>
+        	</div>
+        </div>
+        <div class="val value6 col-md-4 col-sm-12">
+          <div class="valign">
+            <div class="text-value">Almacén</div>
+            <p>  Camino al Huajical #3, esquina Carretera a Nogales,
+              La Quemada, Magdalena, Jal.</p>
+          </div>
+
+          <div class="valign">
+            <div class="text-value">Oficinas</div>
+            <p> Av. López Mateos Sur 1480, Pent House, Col, Chapalita, Guadalajara, Jal.</p>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+
+
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-sm-12">
+
+
+					<p class="pfooter">
+						Energy Combustibles® 2018
+Todos los derechos reservados.
+					</p>
+				</div>
+
+			</div>
+		</div>
+	</footer>
+
+
+  <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom JavaScript for this theme -->
+    <script src="js/scrolling-nav.js"></script>
+</body>
+</html>

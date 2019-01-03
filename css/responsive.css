@@ -3,33 +3,42 @@
 }
 @media (max-width: 991px) {
 	.bg-dark {
-	    background-color:#8585859e!important;
-
+	    background-color:rgba(0,0,0,.7) !important;
+	    padding-bottom: 12px;
 
 	}
+	.header.bg {
+		height: auto;
+	}
 	.logodam {
-    top: 1px;
+    	top: 1px;
+	}
+	.navbar-dark .navbar-toggler {
+    	margin-top: 5px;
+    	border-color: #e2a836;
+	}
 
-}
-
+	.navbar-dark .navbar-toggler-icon {
+  		background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(226,168,54, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+	}
 	.text-value {
 		font-size: 18px;
 		line-height: 22px;
 	}
+	#encontacto {
+		border-right: none;
+	}
+}
+@media (max-width: 920px) {
+	.iconserv {
+    	width: 40px;
+	}
 }
 @media (max-width: 840px) {
-	.filtro {
-    height: 850px;
-    background: linear-gradient(90deg, rgba(115, 114, 114, 0.25), rgba(52, 52, 52, 0.6));
-}
-.benefits {
-
-    height: 850px;
-    background: url(../assets/img/fake_brick.png) center;
-}
+	
 .title.first {
 		font-size: 20px;
-		line-height: 45px;
+		line-height: 30px;
 }
 .titlesub {
 
@@ -44,22 +53,20 @@
 	}
 }
 @media (max-width: 767px) {
-
-
-	.logodam {
-    left: 36%;
-}
-
-
 	.benefits {
 		    text-align: center;
-	    height: 850px;
+	    height: auto;
 	    background: url(../assets/img/fake_brick.png) center;
 	}
+	.filtro {
+		height: auto;
+    	padding-bottom: 30px;
+	}
 	.value6 {
-		height: 300px;
-text-align: center;
-}
+		height: auto;
+		text-align: center;
+		padding-bottom: 70px;
+	}
 	.form.float-left {
     width: calc(100% - 40px);
     position: absolute;
@@ -77,13 +84,11 @@ text-align: center;
     width: 49%;
 	}
 	.section-form {
-    height: 800px;
+    height: 600px;
 	}
 }
 @media (max-width: 575px) {
-	.logodam {
-		left: 32%;
-}
+	
 	.value6 {
     height: 300px;
 
@@ -98,8 +103,7 @@ text-align: center;
     max-height: 100vh;
 	}
 	.title.first {
-		      margin-top: 150px!important;
-			font-size: 20px;
+		    font-size: 20px;
 			line-height: 35px;
 	}
 	.titlesub {
@@ -113,16 +117,13 @@ text-align: center;
 }
 @media (max-width: 450px) {
 	.title, .title.first {
-    font-size: 20px;
-    line-height: 35px;
-		      margin-top: 150px!important;
+    font-size: 18px;
+    line-height: 25px;
 	}
 	.form.float-left {
 		top: 150px;
 	}
-	.section-form {
-    height: 750px;
-	}
+	
 	.section-title.text-center {
     height: 360px;
 	}

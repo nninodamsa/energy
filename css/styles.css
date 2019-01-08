@@ -439,3 +439,19 @@ footer {
 
 
 }
+.contact {
+	background: #131312;
+	padding: 30px 0px;
+}
+.text-contact, .title-contact {
+	text-align: center;
+}
+.text-contact {
+	font-size: 20px;
+	color: #fff;
+	font-weight: 400;
+}
+.title-contact {
+	font-size: 38px;
+	color: #e2a836;
+}
